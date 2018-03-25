@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+		<head>
+				<title>CJY-sky</title>
+				<meta charset='utf-8'>
+				<meta name='keywords' content=''>
+				<meta name='description' content=''>
+				<style>
+					.warp{
+						width: 300px;
+						height: 300px;
+						margin: 260px auto 0;
+						padding:50px;
+						perspective: 700px;
+					}
+					.boxx{
+						position:relative;
+						transform-style:preserve-3d;
+						transform:rotate(0deg);
+						transform-origin:150px 150px 150px;
+						animation:run 7s ease infinite both;
+					}
+					[class|=box]{
+						position:absolute;
+						width: 300px;
+						height: 300px;
+						opacity:0.5;
+					}
+					.box-top{
+						top:-300px;
+						background-color:#f3b8fe;
+						transform-origin:bottom;
+						transform:rotateX(90deg);
+						
+					}
+					.box-left{
+						left:-300px;	
+						background-color:#caffca;
+						transform-origin:right;
+						transform:rotateY(-90deg);
+					}
+					.box-center{
+						background-color:#faa;
+						transform:translateZ(-300px);
+					}
+					.box-right{
+						right:-300px;
+						background-color:#8ac5ff;
+						transform-origin:left;
+						transform:rotateY(90deg);
+					}
+					.box-bottom{
+						bottom:-600px;
+						background-color:#ffb895;
+						transform-origin:top;
+						transform:rotateX(-90deg);
+					}
+					#center2{
+						background-color:#ffb3ff;
+						transform:translateZ(0px);
+					}
+					@keyframes run{
+						0%{transform:rotateX(-10deg);}
+						15%{transform:rotateY(60deg);}
+						20%{transform:rotateZ(100deg);}
+						70%{transform:rotateX(600deg);}
+						87%{transform:rotateZ(600deg);}
+						100%{transform:rotateY(740deg);}
+						100%{transform:rotateX(690deg);}
+						100%{transform:rotateY(690deg);}
+				</style>
+				</head>
+		<body>
+			<div class='warp'>
+				<div class='boxx'>
+					<div class='box-top'></div>
+					<div class='box-left'></div>
+					<div class='box-center'></div>
+					<div class='box-right'></div>
+					<div class='box-bottom'></div>
+					<div class='box-center' id='center2'></div>
+				</div>
+			</div>
+		</body>
+</html>
